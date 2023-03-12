@@ -244,7 +244,7 @@ const query = class query {
 
           if (this.className === '_User') {
             const current = this.current()
-            let newStorage = Object.assign(current, saveData)
+            let newStorage = Object.assign(current||{}, saveData)
             storage.save('bmob', newStorage)
           }
 
